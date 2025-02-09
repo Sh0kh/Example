@@ -6,12 +6,14 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import AdminLayout from "./layouts/AdminLayout";
 import ProtectedRoute from "./Components/ProtectedRoute"; // Импорт компонента защиты маршрутов
+import UI from "./Pages/UI";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/example/UI" element={<UI />} />
         <Route path="/" element={<AppLayout />}>
           <Route
             element={
