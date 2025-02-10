@@ -10,7 +10,7 @@ import Table from "../Components/UI/Table/Table";
 import Person from "../Components/UI/Icons/Person";
 import Delete from "../Components/UI/Icons/Delete";
 import Edit from "../Components/UI/Icons/Edit";
-import Delete2 from "./Delete2";
+import Delete2 from "../Components/UI/Icons/Delete2";
 import Menu from "../Components/UI/Icons/Menu";
 import Telegram from "../Components/UI/Icons/Telegram";
 import Instagram from "../Components/UI/Icons/Instagram";
@@ -19,9 +19,15 @@ import Home from "../Components/UI/Icons/Home";
 import Arrow from "../Components/UI/Icons/Arrow";
 import File from "../Components/UI/Icons/File";
 import Eye from "../Components/UI/Icons/Eye";
+import NormalModalEx from "../Components/UI/Modals/Example/NormalModalEx";
+import SmallModalEx from "../Components/UI/Modals/Example/SmallModalEx";
+import BigModalEx from "../Components/UI/Modals/Example/BigModalEx";
 
 export default function UI() {
     const [input, setInput] = useState('')
+    const [normalModal, setNormalModal] = useState(false)
+    const [smallModal, setSmallModal] = useState(false)
+    const [bigModal, setBigModal] = useState(false)
 
     const [selectedOption, setSelectedOption] = useState(null);
     const optionsSelect = [
@@ -157,6 +163,21 @@ export default function UI() {
                             <File color={'white'} size={"50px"} />
                             <Eye color={'white'} size={"50px"} />
                         </div>
+                    </div>
+                </div>
+                <div className="flex items-center justify-center mt-[50px] w-[100%]">
+                    <div className="w-full">
+                        <h2 className="text-[white] text-center">
+                            This is icons
+                        </h2>
+                        <div className="flex items-center justify-between mt-[20px] w-[100%]">
+                            <Button onClick={() => setSmallModal(true)} content={"Small modal"} />
+                            <Button onClick={() => setNormalModal(true)} content={"Normal modal"} />
+                            <Button onClick={() => setBigModal(true)} content={"Big modal"} />
+                        </div>
+                        <NormalModalEx isOpen={normalModal} onClose={() => setNormalModal(false)} />
+                        <SmallModalEx isOpen={smallModal} onClose={() => setSmallModal(false)} />
+                        <BigModalEx isOpen={bigModal} onClose={() => setBigModal(false)} />
                     </div>
                 </div>
             </div>
