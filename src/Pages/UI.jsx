@@ -6,6 +6,7 @@ import Loading from "../Components/UI/Loadings/Loading";
 import Head from "../Components/UI/Head/Head";
 import Paragraph from "../Components/UI/Paragraph/Paragraph";
 import Text from "../Components/UI/Text/Text";
+import Table from "../Components/UI/Table/Table";
 
 export default function UI() {
     const [input, setInput] = useState('')
@@ -16,6 +17,17 @@ export default function UI() {
         { value: "option2", label: "Option 2" },
         { value: "option3", label: "Option 3" },
     ];
+
+    const TableThead = ["Number", "Name", "Price", "Info", "Settings"]
+    const TableTbody = [
+        {
+            Number: 1,
+            Name: "Lap top",
+            Price: "250 000",
+            Info: "Good lap top",
+            Settings: ''
+        }
+    ]
 
     return (
         <div className="h-screen overflow-hidden overflow-y-auto bg-[black] pt-[30px] pb-[50px]">
@@ -49,10 +61,11 @@ export default function UI() {
                     <h2 className="text-[white] text-center">
                         This is select
                     </h2>
-                    <Select 
-                    options={optionsSelect}
-                    value={selectedOption}
-                    onChange={setSelectedOption}
+                    <Select
+                        SelectText={"Example..."}
+                        options={optionsSelect}
+                        value={selectedOption}
+                        onChange={setSelectedOption}
                     />
                 </div>
 
@@ -97,6 +110,20 @@ export default function UI() {
                         color={'white'}
                         size={'20px'}
                     />
+                </div>
+
+                <div className="flex items-center justify-center mt-[50px] w-[100%]">
+                    <div className="w-full">
+                        <h2 className="text-[white] text-center mb-[20px] block">
+                            This is Table
+                        </h2>
+                        <Table
+                            theadColor={'white'}
+                            thead={TableThead}
+                            tbody={TableTbody}
+                            pagapagination={true}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
