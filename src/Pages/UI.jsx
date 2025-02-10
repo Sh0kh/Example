@@ -7,6 +7,18 @@ import Head from "../Components/UI/Head/Head";
 import Paragraph from "../Components/UI/Paragraph/Paragraph";
 import Text from "../Components/UI/Text/Text";
 import Table from "../Components/UI/Table/Table";
+import Person from "../Components/UI/Icons/Person";
+import Delete from "../Components/UI/Icons/Delete";
+import Edit from "../Components/UI/Icons/Edit";
+import Delete2 from "./Delete2";
+import Menu from "../Components/UI/Icons/Menu";
+import Telegram from "../Components/UI/Icons/Telegram";
+import Instagram from "../Components/UI/Icons/Instagram";
+import Youtube from "../Components/UI/Icons/Youtube";
+import Home from "../Components/UI/Icons/Home";
+import Arrow from "../Components/UI/Icons/Arrow";
+import File from "../Components/UI/Icons/File";
+import Eye from "../Components/UI/Icons/Eye";
 
 export default function UI() {
     const [input, setInput] = useState('')
@@ -123,6 +135,28 @@ export default function UI() {
                             tbody={TableTbody}
                             pagapagination={true}
                         />
+                    </div>
+                </div>
+
+                <div className="flex items-center justify-center mt-[50px] w-[100%]">
+                    <div className="w-full">
+                        <h2 className="text-[white] text-center">
+                            This is icons
+                        </h2>
+                        <div className="flex items-center justify-between mt-[20px] w-[100%]">
+                            <Person color={'white'} size={"50px"} />
+                            <Delete color={'white'} size={"50px"} />
+                            <Edit color={'white'} size={"50px"} />
+                            <Delete2 color={'white'} size={"50px"} />
+                            <Menu color={'white'} size={"50px"} />
+                            <Telegram color={'white'} size={"50px"} />
+                            <Instagram color={'white'} size={"50px"} />
+                            <Youtube color={'white'} size={"50px"} />
+                            <Home color={'white'} size={"50px"} />
+                            <Arrow rotate={'180deg'} color={'white'} size={"50px"} />
+                            <File color={'white'} size={"50px"} />
+                            <Eye color={'white'} size={"50px"} />
+                        </div>
                     </div>
                 </div>
             </div>
