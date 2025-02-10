@@ -22,6 +22,7 @@ import Eye from "../Components/UI/Icons/Eye";
 import NormalModalEx from "../Components/UI/Modals/Example/NormalModalEx";
 import SmallModalEx from "../Components/UI/Modals/Example/SmallModalEx";
 import BigModalEx from "../Components/UI/Modals/Example/BigModalEx";
+import Accardion from "../Components/UI/Accardion/Accardion";
 
 export default function UI() {
     const [input, setInput] = useState('')
@@ -168,7 +169,7 @@ export default function UI() {
                 <div className="flex items-center justify-center mt-[50px] w-[100%]">
                     <div className="w-full">
                         <h2 className="text-[white] text-center">
-                            This is icons
+                            This is Moldals
                         </h2>
                         <div className="flex items-center justify-between mt-[20px] w-[100%]">
                             <Button onClick={() => setSmallModal(true)} content={"Small modal"} />
@@ -178,6 +179,18 @@ export default function UI() {
                         <NormalModalEx isOpen={normalModal} onClose={() => setNormalModal(false)} />
                         <SmallModalEx isOpen={smallModal} onClose={() => setSmallModal(false)} />
                         <BigModalEx isOpen={bigModal} onClose={() => setBigModal(false)} />
+                    </div>
+                </div>
+
+                <div className="flex items-center justify-center mt-[50px] w-[100%]">
+                    <div className="w-full">
+                        <h2 className="text-[white] text-center">
+                            This is Accardion
+                        </h2>
+                        <div className="flex items-center justify-between mt-[20px] w-[100%]">
+                            <Accardion icon={true} head={"Accardion"} body={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime accusantium dolor adipisci consequuntur debitis. Consequatur eaque sit cum dolor perferendis.'}/>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
