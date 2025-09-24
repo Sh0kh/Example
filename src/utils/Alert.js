@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 
-// Add global styles for SweetAlert
 (function addGlobalStyles() {
     if (!document.getElementById('swal-global-styles')) {
         const styleElement = document.createElement('style');
@@ -21,7 +20,6 @@ import Swal from "sweetalert2";
         document.head.appendChild(styleElement);
     }
 })();
-
 export const Alert = (message, iconType) => {
     Swal.fire({
         title: message,

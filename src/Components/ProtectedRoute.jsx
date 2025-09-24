@@ -1,11 +1,11 @@
 import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
-    const token = localStorage.getItem("token"); // Проверяем наличие токена в localStorage
+    const token = localStorage.getItem("token");
     if (!token) {
-        return <Navigate to="/login" replace />; // Перенаправляем на страницу логина
+        return <Navigate to="/login" replace />;
     }
-    return children; // Если токен есть, рендерим дочерний компонент
+    return children;
 };
 
 export default ProtectedRoute;
